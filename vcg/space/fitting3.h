@@ -34,6 +34,7 @@
 
 namespace vcg {
 
+
 /*! \brief compute the covariance matrix of a set of point
 
   It returns also the barycenter of the point set
@@ -45,7 +46,7 @@ void ComputeCovarianceMatrix(const std::vector<Point3<S> > &pointVec, Point3<S> 
   barycenter.SetZero();
   typename  std::vector< Point3<S> >::const_iterator pit;
   for( pit = pointVec.begin(); pit != pointVec.end(); ++pit) barycenter+= (*pit);
-  barycenter/=pointVec.size();
+  barycenter/=(float)pointVec.size();
 
   // second cycle: compute the covariance matrix
   m.setZero();

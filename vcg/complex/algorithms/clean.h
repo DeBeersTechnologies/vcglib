@@ -295,7 +295,7 @@ public:
     for(EdgeIterator ei=m.edge.begin();ei!=m.edge.end();++ei)
       if(!(*ei).IsD())
       {
-        eVec.push_back(SortedPair(	tri::Index(m,(*ei).V(0)), tri::Index(m,(*ei).V(1)), &*ei));
+        eVec.push_back(SortedPair((int)	tri::Index(m,(*ei).V(0)), (int) tri::Index(m,(*ei).V(1)), &*ei));
       }
     std::sort(eVec.begin(),eVec.end());
     int total=0;
@@ -1325,7 +1325,7 @@ public:
     }
 
     int voteCount=0;
-    ScalarType angleThreshold = cos(math::ToRad(85.0));
+    ScalarType angleThreshold = (float)cos(math::ToRad(85.0));
     for(size_t i=0;i<dirVec.size();++i)
     {
       //          qDebug("Min vert along (%f %f %f) is %f %f %f",dirVec[i][0],dirVec[i][1],dirVec[i][2],minVertVec[i]->P()[0],minVertVec[i]->P()[1],minVertVec[i]->P()[2]);

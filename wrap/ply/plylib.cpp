@@ -63,6 +63,7 @@ of Greg Turk and on the work of Claudio Rocchini
 #include <algorithm>
 
 #include "plylib.h"
+#include "stdafx.h"
 using namespace std;
 namespace vcg{
   namespace ply{
